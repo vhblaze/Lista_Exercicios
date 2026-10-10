@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Aluno">
+<meta name="description" content="Web site com os elementos (tags) HTML vistos em sala e a referência de elementos HTML">
+<title>Web site de tags HTML</title>
+<base target="_self">
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; background: #fafafa; color: #222222; }
+  header, footer { background: #1f3fb5; color: #ffffff; text-align: center; padding: 16px; }
+  nav { background: #e6ebff; padding: 10px 20px; }
+  nav a { margin-right: 14px; }
+  main { padding: 20px 40px; }
+  section { background: #ffffff; border: 1px solid #ccc; padding: 14px 20px; margin-bottom: 20px; }
+  h2 { color: #1f3fb5; border-bottom: 2px solid #1f3fb5; }
+  table, th, td { border: 1px solid #555; border-collapse: collapse; padding: 4px 8px; }
+  code { background: #eeeeee; padding: 0 4px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Elementos (tags) HTML</h1>
+  <p>Exemplos de cada elemento, organizados por categoria</p>
+</header>
+
+<nav>
+  <a href="#estrutura">Estrutura</a>
+  <a href="#texto">Texto</a>
+  <a href="#listas">Listas</a>
+  <a href="#links">Links e imagens</a>
+  <a href="#tabelas">Tabelas</a>
+  <a href="#formularios">Formulários</a>
+  <a href="#html5">HTML5</a>
+</nav>
+
+<main>
+
+<section id="estrutura">
+  <h2>1. Estrutura e divisão</h2>
+  <p>Elementos: <code>html, head, title, meta, base, link, style, script, noscript, body, div, span, hr, br</code>.</p>
+  <div style="background:#ffe680; padding:8px;">Este texto está dentro de uma <b>div</b> com fundo amarelo.</div>
+  <p>Linha 1<br>Linha 2 (quebra com <code>br</code>)</p>
+  <hr>
+  <p>Texto com <span style="color:red;">trecho em vermelho</span> dentro de um <code>span</code>.</p>
+  <noscript>Seu navegador está com o JavaScript desligado.</noscript>
+</section>
+
+<section id="texto">
+  <h2>2. Texto e formatação</h2>
+  <h1>Título h1</h1>
+  <h2>Título h2</h2>
+  <h3>Título h3</h3>
+  <h4>Título h4</h4>
+  <h5>Título h5</h5>
+  <h6>Título h6</h6>
+  <p>Parágrafo com <b>negrito</b>, <strong>strong</strong>, <i>itálico</i>, <em>ênfase</em>, <u>sublinhado</u>,
+     <small>texto pequeno</small>, <big>texto grande</big>, <mark>destaque</mark>, <del>texto removido</del>,
+     <ins>texto inserido</ins>, <s>riscado</s>, H<sub>2</sub>O e x<sup>2</sup>.</p>
+  <p>Semântica: <abbr title="HyperText Markup Language">HTML</abbr>, <acronym title="World Wide Web">WWW</acronym>,
+     <cite>Título de obra</cite>, <dfn>definição</dfn>, <q>citação curta</q>, <kbd>Ctrl + C</kbd>,
+     <samp>saída do programa</samp>, <var>variável</var>, <code>código</code>, <time datetime="2026-10-09">09/10/2026</time>.</p>
+  <p>Texto <bdo dir="rtl">invertido com bdo</bdo>.</p>
+  <blockquote>Bloco de citação longa feito com a tag blockquote.</blockquote>
+  <pre>Texto pré-formatado:
+    mantém    espaços
+        e quebras de linha.</pre>
+  <address>Endereço: Av. Exemplo, 123 - Uberlândia/MG</address>
+  <center>Texto centralizado com a tag center</center>
+  <p><font color="blue" size="4" face="Verdana">Texto com a tag font</font></p>
+</section>
+
+<section id="listas">
+  <h2>3. Listas</h2>
+  <p>Elementos: <code>ul, ol, li, dl, dt, dd</code>.</p>
+  <ul>
+    <li>Item de lista não ordenada</li>
+    <li>Outro item</li>
+  </ul>
+  <ol type="1">
+    <li>Primeiro</li>
+    <li>Segundo</li>
+    <li>Terceiro</li>
+  </ol>
+  <dl>
+    <dt>HTML</dt>
+    <dd>Linguagem de marcação para páginas web.</dd>
+    <dt>CSS</dt>
+    <dd>Linguagem de estilos para páginas web.</dd>
+  </dl>
+</section>
+
+<section id="links">
+  <h2>4. Links, imagens e mídia</h2>
+  <p>Elementos: <code>a, img, map, area, iframe, object, embed, audio, video</code>.</p>
+  <p><a href="https://www.unitri.edu.br" target="_blank">Link para o site da Unitri</a> |
+     <a href="#estrutura">Link interno para o topo</a> |
+     <a href="mailto:aluno@exemplo.com">Enviar e-mail</a></p>
+  <p>
+    <img src="imagens/cafe1.svg" alt="Xícara de café" width="150" usemap="#mapa">
+    <map name="mapa">
+      <area shape="rect" coords="0,0,75,120" href="#texto" alt="Lado esquerdo">
+      <area shape="circle" coords="110,60,30" href="#listas" alt="Lado direito">
+    </map>
+  </p>
+  <p>Frame embutido (iframe):</p>
+  <iframe src="Exercicio2.html" width="420" height="160" title="Exercício 2"></iframe>
+  <p>Áudio e vídeo (os arquivos são exemplos):</p>
+  <audio controls><source src="exemplo.mp3" type="audio/mpeg">Seu navegador não suporta áudio.</audio>
+  <video controls width="240"><source src="exemplo.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
+</section>
+
+<section id="tabelas">
+  <h2>5. Tabelas</h2>
+  <p>Elementos: <code>table, caption, colgroup, col, thead, tbody, tfoot, tr, th, td</code>.</p>
+  <table>
+    <caption>Notas do semestre</caption>
+    <colgroup><col style="background:#f0f0f0"><col span="2"></colgroup>
+    <thead>
+      <tr><th>Aluno</th><th>Prova</th><th>Trabalho</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Ana</td><td>9</td><td>8</td></tr>
+      <tr><td>Paulo</td><td>7</td><td>6</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td colspan="3">Média da turma calculada pelo professor</td></tr>
+    </tfoot>
+  </table>
+</section>
+
+<section id="formularios">
+  <h2>6. Formulários</h2>
+  <p>Elementos: <code>form, fieldset, legend, label, input, select, optgroup, option, textarea, button, datalist, output</code>.</p>
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Cadastro</legend>
+      <p><label for="f-nome">Nome:</label> <input type="text" id="f-nome" name="nome"></p>
+      <p><label for="f-senha">Senha:</label> <input type="password" id="f-senha" name="senha"></p>
+      <p><label for="f-mail">E-mail:</label> <input type="email" id="f-mail" name="email"></p>
+      <p><label for="f-num">Número:</label> <input type="number" id="f-num" name="numero" min="0" max="10"></p>
+      <p><label for="f-data">Data:</label> <input type="date" id="f-data" name="data"></p>
+      <p><label for="f-cor">Cor:</label> <input type="color" id="f-cor" name="cor"></p>
+      <p><label for="f-faixa">Faixa:</label> <input type="range" id="f-faixa" name="faixa"></p>
+      <p>Sexo:
+        <input type="radio" name="sexo" value="f"> Feminino
+        <input type="radio" name="sexo" value="m"> Masculino</p>
+      <p>Interesses:
+        <input type="checkbox" name="int" value="web"> Web
+        <input type="checkbox" name="int" value="bd"> Banco de dados</p>
+      <p><label for="f-sel">Curso:</label>
+        <select id="f-sel" name="curso">
+          <optgroup label="Computação">
+            <option>Sistemas de Informação</option>
+            <option>Ciência da Computação</option>
+          </optgroup>
+          <optgroup label="Engenharia">
+            <option>Engenharia Civil</option>
+          </optgroup>
+        </select></p>
+      <p><label for="f-lista">Linguagem:</label>
+        <input list="linguagens" id="f-lista" name="linguagem">
+        <datalist id="linguagens">
+          <option value="HTML"><option value="CSS"><option value="JavaScript">
+        </datalist></p>
+      <p><label for="f-obs">Observações:</label><br>
+        <textarea id="f-obs" name="obs" rows="3" cols="40"></textarea></p>
+      <p><input type="file" name="arquivo"> <input type="hidden" name="oculto" value="1"></p>
+      <p>
+        <button type="button">Botão comum</button>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+        <input type="image" src="imagens/visa.svg" alt="Enviar com imagem" width="50">
+      </p>
+      <p><progress value="40" max="100">40%</progress> <meter value="0.7">70%</meter></p>
+    </fieldset>
+  </form>
+</section>
+
+<section id="html5">
+  <h2>7. Elementos semânticos do HTML5</h2>
+  <p>Elementos: <code>header, nav, main, section, article, aside, footer, figure, figcaption, details, summary, mark, time</code>.</p>
+  <article>
+    <header><h3>Artigo de exemplo</h3></header>
+    <p>Conteúdo principal do artigo.</p>
+    <aside>Nota lateral relacionada ao artigo.</aside>
+    <figure>
+      <img src="imagens/cafe2.svg" alt="Café com leite" width="120">
+      <figcaption>Figura 1: figcaption descreve a figura.</figcaption>
+    </figure>
+    <details>
+      <summary>Clique para ver mais</summary>
+      <p>Texto escondido que aparece quando o usuário abre o details.</p>
+    </details>
+    <footer>Publicado em <time datetime="2026-10-09">09/10/2026</time></footer>
+  </article>
+</section>
+
+</main>
+
+<footer>
+  <p>Fim da página - Todos os direitos reservados</p>
+</footer>
+
+<script>
+  // Elemento script: mostra a data atual no console
+  console.log("Página carregada em " + new Date().toLocaleDateString("pt-BR"));
+</script>
+</body>
+</html>

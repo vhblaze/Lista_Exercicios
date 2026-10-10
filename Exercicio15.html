@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Exemplos de CSS</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; background: #f6f6f6; }
+  header { background: #1f3fb5; color: #ffffff; padding: 18px; text-align: center; }
+  nav { background: #dfe6ff; padding: 10px 20px; }
+  nav a { margin-right: 12px; }
+  section { background: #ffffff; margin: 20px 40px; padding: 10px 24px 20px; border: 1px solid #cccccc; }
+  h2 { color: #1f3fb5; border-bottom: 2px solid #1f3fb5; }
+  .legenda { color: #666666; font-size: 13px; }
+
+  /* 1. Cores e fundo */
+  .cor-texto { color: #cc0000; }
+  .fundo-cor { background-color: #ffe680; padding: 8px; }
+  .fundo-gradiente { background: linear-gradient(to right, #1f3fb5, #7fd1ff); color: #ffffff; padding: 12px; }
+
+  /* 2. Texto */
+  .centro { text-align: center; }
+  .justificado { text-align: justify; }
+  .recuo { text-indent: 40px; }
+  .maiusculas { text-transform: uppercase; letter-spacing: 3px; }
+  .sublinhado { text-decoration: underline; }
+  .sombra { text-shadow: 2px 2px 4px #888888; font-size: 28px; }
+
+  /* 3. Fontes */
+  .serifa { font-family: "Times New Roman", serif; }
+  .mono { font-family: "Courier New", monospace; }
+  .grande { font-size: 24px; font-weight: bold; font-style: italic; }
+
+  /* 4. Links */
+  a.link-estilo { color: #006600; text-decoration: none; }
+  a.link-estilo:hover { color: #ffffff; background: #006600; }
+  a.link-estilo:visited { color: #660066; }
+
+  /* 5. Listas */
+  ul.quadrado { list-style-type: square; }
+  ol.romano { list-style-type: upper-roman; }
+  ul.sem-marcador { list-style: none; padding-left: 0; }
+
+  /* 6. Tabelas */
+  table.exemplo { border-collapse: collapse; width: 60%; }
+  table.exemplo th, table.exemplo td { border: 1px solid #333333; padding: 6px; text-align: center; }
+  table.exemplo th { background: #1f3fb5; color: #ffffff; }
+  table.exemplo tr:nth-child(even) { background: #e8e8e8; }
+  table.exemplo tr:hover { background: #fff3a6; }
+
+  /* 7. Bordas */
+  .borda-solida { border: 3px solid #1f3fb5; padding: 8px; }
+  .borda-tracejada { border: 3px dashed #cc0000; padding: 8px; }
+  .borda-pontilhada { border: 3px dotted #006600; padding: 8px; }
+  .borda-redonda { border: 2px solid #333333; border-radius: 20px; padding: 10px; }
+
+  /* 8. Margem e espaçamento interno */
+  .caixa-margem { border: 1px solid #333333; margin: 20px 60px; }
+  .caixa-padding { border: 1px solid #333333; padding: 25px 50px; background: #eef; }
+
+  /* 9. Dimensões */
+  .dimensao { width: 300px; height: 60px; background: #c9f0d8; border: 1px solid #333333; }
+  .max { max-width: 50%; background: #ffd9e0; padding: 6px; }
+
+  /* 10. Display e visibilidade */
+  .inline-bloco span { display: inline-block; width: 100px; background: #ffe680; margin: 4px; text-align: center; }
+  .invisivel { visibility: hidden; }
+  .oculto { display: none; }
+
+  /* 11. Posicionamento */
+  .pai-posicao { position: relative; height: 120px; background: #eeeeee; border: 1px solid #333333; }
+  .filho-absoluto { position: absolute; top: 10px; right: 10px; background: #1f3fb5; color: #ffffff; padding: 8px; }
+  .filho-relativo { position: relative; left: 30px; top: 10px; background: #ffe680; display: inline-block; padding: 8px; }
+
+  /* 12. Float */
+  .flutua-esq { float: left; width: 120px; height: 70px; background: #c9f0d8; margin-right: 12px; }
+  .limpar { clear: both; }
+
+  /* 13. Pseudo-classes e pseudo-elementos */
+  p.primeira::first-letter { font-size: 40px; color: #cc0000; font-weight: bold; }
+  p.primeira::first-line { font-variant: small-caps; }
+  .botao-hover { background: #1f3fb5; color: #ffffff; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; }
+  .botao-hover:hover { background: #cc0000; }
+  input.foco:focus { background: #ffffcc; outline: 2px solid #1f3fb5; }
+  .antes::before { content: "[ antes ] "; color: #cc0000; }
+  .depois::after { content: " [ depois ]"; color: #006600; }
+
+  /* 14. Opacidade e cursor */
+  .opaco { background: #1f3fb5; color: #ffffff; padding: 10px; opacity: 0.5; }
+  .cursor-mao { cursor: pointer; background: #ffe680; padding: 6px; display: inline-block; }
+
+  /* 15. Seletores */
+  #unico { background: #ffd9e0; padding: 6px; }
+  div.seletor > p { color: #cc0000; }
+  div.seletor p + p { color: #006600; }
+  input[type="text"].atributo { border: 2px solid #1f3fb5; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Exemplos de CSS</h1>
+  <p>Um exemplo de cada categoria, com explicações em português</p>
+</header>
+
+<nav>
+  <a href="#cores">Cores</a><a href="#texto">Texto</a><a href="#fontes">Fontes</a><a href="#links">Links</a>
+  <a href="#listas">Listas</a><a href="#tabelas">Tabelas</a><a href="#bordas">Bordas</a><a href="#caixa">Margem/Padding</a>
+  <a href="#dimensoes">Dimensões</a><a href="#display">Display</a><a href="#posicao">Posição</a><a href="#float">Float</a>
+  <a href="#pseudo">Pseudo</a><a href="#outros">Outros</a><a href="#seletores">Seletores</a>
+</nav>
+
+<section id="cores">
+  <h2>Cores e fundo</h2>
+  <p class="cor-texto">Texto vermelho (propriedade <b>color</b>).</p>
+  <p class="fundo-cor">Fundo amarelo (propriedade <b>background-color</b>).</p>
+  <p class="fundo-gradiente">Fundo com degradê (<b>linear-gradient</b>).</p>
+</section>
+
+<section id="texto">
+  <h2>Texto</h2>
+  <p class="centro">Texto centralizado (text-align: center).</p>
+  <p class="justificado">Texto justificado: o navegador distribui as palavras para que as linhas fiquem alinhadas nas duas margens da página, como em jornais e livros. Este exemplo precisa de várias linhas para ficar visível.</p>
+  <p class="recuo">Texto com recuo na primeira linha (text-indent: 40px).</p>
+  <p class="maiusculas">texto em maiúsculas com espaço entre letras</p>
+  <p class="sublinhado">Texto sublinhado (text-decoration).</p>
+  <p class="sombra">Texto com sombra</p>
+</section>
+
+<section id="fontes">
+  <h2>Fontes</h2>
+  <p class="serifa">Fonte com serifa (Times New Roman).</p>
+  <p class="mono">Fonte monoespaçada (Courier New).</p>
+  <p class="grande">Fonte grande, negrito e itálico.</p>
+</section>
+
+<section id="links">
+  <h2>Links</h2>
+  <p><a class="link-estilo" href="#links">Passe o mouse aqui: o fundo muda (a:hover)</a></p>
+  <p class="legenda">O link visitado muda de cor (a:visited).</p>
+</section>
+
+<section id="listas">
+  <h2>Listas</h2>
+  <ul class="quadrado"><li>Marcador quadrado</li><li>Segundo item</li></ul>
+  <ol class="romano"><li>Numeração romana</li><li>Segundo item</li></ol>
+  <ul class="sem-marcador"><li>Lista sem marcadores</li><li>Segundo item</li></ul>
+</section>
+
+<section id="tabelas">
+  <h2>Tabelas</h2>
+  <table class="exemplo">
+    <tr><th>Aluno</th><th>Prova</th><th>Trabalho</th></tr>
+    <tr><td>Ana</td><td>9</td><td>8</td></tr>
+    <tr><td>Beatriz</td><td>7</td><td>6</td></tr>
+    <tr><td>Paulo</td><td>8</td><td>9</td></tr>
+  </table>
+  <p class="legenda">Linhas alternadas (nth-child) e destaque ao passar o mouse (hover).</p>
+</section>
+
+<section id="bordas">
+  <h2>Bordas</h2>
+  <p class="borda-solida">Borda sólida</p>
+  <p class="borda-tracejada">Borda tracejada</p>
+  <p class="borda-pontilhada">Borda pontilhada</p>
+  <p class="borda-redonda">Borda com cantos arredondados (border-radius)</p>
+</section>
+
+<section id="caixa">
+  <h2>Margem (margin) e espaçamento interno (padding)</h2>
+  <div class="caixa-margem">Caixa com margem externa de 20px em cima/baixo e 60px nas laterais.</div>
+  <div class="caixa-padding">Caixa com espaçamento interno (padding) de 25px/50px.</div>
+</section>
+
+<section id="dimensoes">
+  <h2>Dimensões</h2>
+  <div class="dimensao">width: 300px; height: 60px</div>
+  <p class="max">Largura máxima de 50% (max-width).</p>
+</section>
+
+<section id="display">
+  <h2>Display e visibilidade</h2>
+  <div class="inline-bloco"><span>inline-block</span><span>caixa 2</span><span>caixa 3</span></div>
+  <p>Antes <span class="invisivel">[invisível mas ocupa espaço]</span> depois (visibility: hidden).</p>
+  <p>Antes <span class="oculto">[não aparece nem ocupa espaço]</span> depois (display: none).</p>
+</section>
+
+<section id="posicao">
+  <h2>Posicionamento</h2>
+  <div class="pai-posicao">
+    Caixa pai (position: relative)
+    <div class="filho-absoluto">absolute: canto superior direito</div>
+    <br><span class="filho-relativo">relative: deslocado 30px</span>
+  </div>
+</section>
+
+<section id="float">
+  <h2>Float</h2>
+  <div class="flutua-esq">float: left</div>
+  <p>O texto contorna a caixa que flutua à esquerda. Isso é usado para colocar imagens ao lado de textos e criar colunas simples. O texto continua escorrendo ao redor da caixa até acabar o espaço.</p>
+  <div class="limpar"></div>
+</section>
+
+<section id="pseudo">
+  <h2>Pseudo-classes e pseudo-elementos</h2>
+  <p class="primeira">A primeira letra e a primeira linha deste parágrafo têm estilo próprio, usando first-letter e first-line. O restante do texto continua normal para mostrar a diferença.</p>
+  <p><button class="botao-hover">Passe o mouse (hover)</button></p>
+  <p><input type="text" class="foco" placeholder="Clique aqui (focus)"></p>
+  <p class="antes">Texto com conteúdo antes (::before)</p>
+  <p class="depois">Texto com conteúdo depois (::after)</p>
+</section>
+
+<section id="outros">
+  <h2>Opacidade e cursor</h2>
+  <p class="opaco">Caixa com opacidade 50% (opacity).</p>
+  <p><span class="cursor-mao">Passe o mouse: o cursor vira uma mãozinha (cursor: pointer)</span></p>
+</section>
+
+<section id="seletores">
+  <h2>Seletores</h2>
+  <p id="unico">Seletor de ID (#unico).</p>
+  <div class="seletor">
+    <p>Filho direto (div.seletor &gt; p) - vermelho.</p>
+    <p>Irmão adjacente (p + p) - verde.</p>
+  </div>
+  <p><input type="text" class="atributo" placeholder="Seletor de atributo [type=text]"></p>
+</section>
+
+</body>
+</html>

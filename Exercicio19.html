@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Exercício 19 - Quantidade de letras</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 30px; }
+  input { padding: 4px; width: 260px; }
+</style>
+</head>
+<body>
+  <h2>Quantidade de letras do texto</h2>
+
+  <input type="text" id="texto" placeholder="Digite um texto">
+  <button onclick="contarLetras()">Contar letras</button>
+
+  <script>
+    function contarLetras() {
+      var texto = document.getElementById("texto").value;
+
+      // Conta apenas as letras (ignora espaços, números e símbolos)
+      var letras = texto.match(/[A-Za-zÀ-ÿ]/g);
+      var quantidade = letras ? letras.length : 0;
+
+      alert("O texto possui " + quantidade + " letra(s).");
+    }
+  </script>
+</body>
+</html>

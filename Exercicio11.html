@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Escola - Pré-Matrícula</title>
+<style>
+  body { font-family: "Times New Roman", serif; margin: 20px 40px; font-size: 13px; }
+  h1, h2 { text-align: center; margin: 6px 0; }
+  table.externa { width: 100%; border: 3px double #777; border-collapse: collapse; margin-top: 10px; }
+  table.externa > tbody > tr > td { padding: 6px; border-bottom: 2px solid #777; }
+  .dados td { text-align: right; padding: 2px 4px; }
+  .dados td.campo { text-align: left; }
+  input.curto { width: 36px; }
+  input.longo { width: 220px; }
+  .botoes { text-align: center; margin-top: 14px; }
+</style>
+</head>
+<body>
+  <h1>Escola</h1>
+  <h2 style="font-size: 16px;">Formulário de Pré-Matrícula</h2>
+  <hr>
+
+  <form action="#" method="post">
+    <table class="externa">
+      <tr>
+        <td>
+          <b>Dados Pessoais:</b>
+          <table class="dados" style="width: 100%;">
+            <tr><td style="width: 55%;">Nome do Aluno:</td><td class="campo"><input type="text" class="longo" name="aluno"></td></tr>
+            <tr><td>Nascimento (dd/mm/aaaa):</td>
+                <td class="campo"><input type="text" class="curto" name="dia" maxlength="2"> / <input type="text" class="curto" name="mes" maxlength="2"> / <input type="text" class="curto" name="ano" maxlength="4"></td></tr>
+            <tr><td>Nome da Mãe:</td><td class="campo"><input type="text" class="longo" name="mae"></td></tr>
+            <tr><td>Nome do Pai:</td><td class="campo"><input type="text" class="longo" name="pai"></td></tr>
+            <tr><td>Telefone: DDD (</td>
+                <td class="campo"><input type="text" class="curto" name="ddd" maxlength="2">) Tel: <input type="text" name="tel" size="10"> Ramal: <input type="text" class="curto" name="ramal"></td></tr>
+            <tr><td>E-Mail:</td><td class="campo"><input type="text" class="longo" name="email"></td></tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>Informações de Matrícula:</b>
+          <table style="width: 100%;">
+            <tr>
+              <td style="vertical-align: top; width: 33%;">
+                Série:<br>
+                <select name="serie">
+                  <option>pré-escolar</option>
+                  <option>1ª série</option>
+                  <option>2ª série</option>
+                  <option>3ª série</option>
+                  <option>4ª série</option>
+                </select>
+              </td>
+              <td style="vertical-align: top; width: 33%;">
+                Turno:<br>
+                <input type="radio" name="turno" value="manha"> Manhã<br>
+                <input type="radio" name="turno" value="tarde"> Tarde
+              </td>
+              <td style="vertical-align: top;">
+                Atividades Extracurriculares:<br>
+                <input type="checkbox" name="atividade" value="informatica"> Informática<br>
+                <input type="checkbox" name="atividade" value="musica"> Música<br>
+                <input type="checkbox" name="atividade" value="bale"> Balé<br>
+                <input type="checkbox" name="atividade" value="pintura"> Pintura<br>
+                <input type="checkbox" name="atividade" value="judo"> Judô<br>
+                <input type="checkbox" name="atividade" value="futebol"> Futebol
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <div class="botoes">
+      <input type="submit" value="Envia Formulário"> <input type="reset" value="Limpa Campos">
+    </div>
+  </form>
+</body>
+</html>

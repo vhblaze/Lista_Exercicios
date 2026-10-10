@@ -1,0 +1,106 @@
+/* Estilo do site "Mundo Games" - Exercício 16 */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #12141f;
+  color: #e8e8f0;
+}
+
+/* Classe 1: container central das páginas */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Classe 2: menu de navegação */
+.menu {
+  background: #1f2340;
+  text-align: center;
+  padding: 14px;
+  border-bottom: 3px solid #7c4dff;
+}
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 14px;
+  font-weight: bold;
+}
+.menu a:hover {
+  color: #ffd54f;
+}
+
+/* Classe 3: destaque (título/banner de cada página) */
+.destaque {
+  background: linear-gradient(135deg, #7c4dff, #00b0ff);
+  color: #ffffff;
+  text-align: center;
+  padding: 36px 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+/* Classe 4: cartão de conteúdo */
+.cartao {
+  background: #1b1f36;
+  border: 1px solid #333a66;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 18px;
+}
+.cartao h2 {
+  color: #ffd54f;
+  margin-top: 0;
+}
+
+/* Classe 5: botão/link em destaque */
+.botao {
+  display: inline-block;
+  background: #ffd54f;
+  color: #12141f;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.botao:hover {
+  background: #ffffff;
+}
+
+/* Classe 6: tabela do ranking */
+.tabela-ranking {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tabela-ranking th, .tabela-ranking td {
+  border: 1px solid #333a66;
+  padding: 8px;
+  text-align: center;
+}
+.tabela-ranking th {
+  background: #7c4dff;
+  color: #ffffff;
+}
+
+/* Classe 7: formulário de contato */
+.formulario label {
+  display: block;
+  margin-top: 12px;
+}
+.formulario input, .formulario textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #333a66;
+}
+
+/* Classe 8: rodapé */
+.rodape {
+  text-align: center;
+  padding: 18px;
+  color: #9aa0c8;
+  border-top: 1px solid #333a66;
+  margin-top: 30px;
+}

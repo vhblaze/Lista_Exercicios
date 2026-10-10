@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Notas dos alunos</title>
+<style>
+  body { font-family: "Times New Roman", serif; margin: 20px 30px; }
+  h3 { font-family: Arial, sans-serif; font-size: 14px; color: #1a1aff; margin: 0; padding: 6px 0;
+       border-top: 3px solid #888; border-bottom: 3px solid #888; }
+  table { margin: 20px auto; border-collapse: separate; border-spacing: 2px; border: 1px solid #ccc; font-size: 12px; }
+  th, td { padding: 2px 8px; text-align: center; }
+  th { background: #ffffff; border: 1px solid #ccc; }
+  .cinza td { background: #aaaaaa; }
+  .branco td { background: #ffffff; border: 1px solid #ccc; }
+  .nome { text-align: left; }
+  .verde { color: #2e9e2e; }
+  .vermelho { color: #ee2a3a; }
+</style>
+</head>
+<body>
+  <h3>Notas dos alunos</h3>
+
+  <table>
+    <tr>
+      <th>Alunos</th>
+      <th colspan="2">Notas</th>
+    </tr>
+    <tr>
+      <th>-</th>
+      <th><i>Prova</i></th>
+      <th><i>Trabalho</i></th>
+    </tr>
+    <tr class="cinza"><td class="nome">Ana Paula</td><td class="verde">10</td><td class="verde">8</td></tr>
+    <tr class="branco"><td class="nome">Beatriz</td><td class="verde">7</td><td class="vermelho">5</td></tr>
+    <tr class="cinza"><td class="nome">Joaquim</td><td class="verde">9</td><td class="verde">10</td></tr>
+    <tr class="branco"><td class="nome">Paulo</td><td class="vermelho">4,5</td><td class="verde">6</td></tr>
+    <tr class="cinza"><td class="nome">Tadeu</td><td class="vermelho">3</td><td class="vermelho">2</td></tr>
+  </table>
+</body>
+</html>

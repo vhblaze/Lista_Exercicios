@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Formulário completo</title>
+<style>
+  body { font-family: "Times New Roman", serif; margin: 30px; }
+  p { margin: 14px 0 4px 0; }
+</style>
+</head>
+<body>
+  <form action="#" method="post">
+    Nome: <input type="text" name="nome"><br>
+    Password: <input type="password" name="senha">
+
+    <p>Em qual moeda você prefere receber seu salário?</p>
+    <input type="radio" name="moeda" value="real"> Real<br>
+    <input type="radio" name="moeda" value="dolar"> Dolar<br>
+    <input type="radio" name="moeda" value="euro"> Euro<br>
+    <input type="radio" name="moeda" value="yen"> Yen
+
+    <p>Quais das afirmações seguintes você considera verdadeiras?</p>
+    <input type="checkbox" name="afirmacao" value="1"> O Boris Yeltsin é abstinente<br>
+    <input type="checkbox" name="afirmacao" value="2"> O Bill Clinton é casto.<br>
+    <input type="checkbox" name="afirmacao" value="3"> O Bill Gates é pobre<br>
+    <input type="checkbox" name="afirmacao" value="4"> A Fernanda Montenegro é péssima atriz.<br>
+    <input type="checkbox" name="afirmacao" value="5"> A Bibi Ferreira é uma beldade.<br>
+    <input type="checkbox" name="afirmacao" value="6"> O Linus Torvalds não entende de programação.
+
+    <p>Arquivo a enviar: <input type="file" name="arquivo"></p>
+
+    <p>Seus times favoritos?</p>
+    <select name="times" size="4" multiple>
+      <option>Corinthians</option>
+      <option>Palmeiras</option>
+      <option>Santos</option>
+      <option>São Paulo</option>
+      <option>Flamengo</option>
+      <option>Cruzeiro</option>
+    </select>
+
+    <p>Gostaria de fazer comentários?</p>
+    <textarea name="comentarios" rows="12" cols="60">Ponha seu comentário
+aqui.</textarea>
+
+    <p><br><input type="submit" value="Manda!"> <input type="reset" value="Limpa"></p>
+  </form>
+</body>
+</html>

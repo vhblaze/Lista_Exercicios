@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Exercício 18 - Click-Me</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 30px; }
+  input { padding: 4px; }
+</style>
+</head>
+<body>
+  <h2>Exibir o conteúdo do campo</h2>
+
+  <input type="text" id="Click-Me" name="Click-Me" placeholder="Digite algo">
+  <button onclick="mostrar()">Mostrar</button>
+
+  <script>
+    function mostrar() {
+      var conteudo = document.getElementById("Click-Me").value;
+      alert(conteudo);
+    }
+  </script>
+</body>
+</html>

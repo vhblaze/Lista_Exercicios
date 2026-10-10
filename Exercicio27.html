@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Meu documento sobre Div HTML</title>
+<style>
+  body { margin: 0; font-family: "Times New Roman", serif; }
+  #pagina { width: 800px; margin: 0 auto; }
+
+  #cabecalho {
+    background: #cccccc;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 0;
+  }
+  #cabecalho h1 { margin: 0; font-size: 28px; font-weight: normal; }
+
+  #conteudo {
+    background: #ff0000;
+    padding: 12px 24px;
+  }
+  .caixa {
+    background: #008000;
+    text-align: center;
+    padding: 6px 0;
+    margin: 8px 0;
+    color: #0a2a0a;
+  }
+  .caixa h3 { margin: 6px 0; font-size: 18px; }
+  .caixa p { margin: 8px 0; font-size: 14px; }
+
+  #rodape {
+    background: #888888;
+    color: #ffffff;
+    text-align: center;
+    padding: 24px 0;
+  }
+</style>
+</head>
+<body>
+  <div id="pagina">
+    <div id="cabecalho">
+      <h1>Meu documento sobre Div HTML</h1>
+    </div>
+
+    <div id="conteudo">
+      <div class="caixa">
+        <h3>Meu conteúdo 01</h3>
+        <p>Meu parágrafo contendo texto</p>
+        <p>Meu parágrafo contendo texto</p>
+      </div>
+
+      <div class="caixa">
+        <h3>Meu conteúdo 02</h3>
+        <p>Meu parágrafo contendo texto</p>
+        <p>Meu parágrafo contendo texto</p>
+      </div>
+    </div>
+
+    <div id="rodape">
+      Todos os direitos reservados
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cartão de crédito</title>
+<style>
+  body { font-family: "Times New Roman", serif; margin: 30px; }
+  table { border-collapse: collapse; }
+  td { border: 1px solid #555; padding: 8px 12px; }
+  td.rotulo { font-weight: bold; text-align: center; }
+  td img { vertical-align: middle; width: 76px; }
+  input[type="text"] { width: 160px; }
+</style>
+</head>
+<body>
+  <form action="#" method="post">
+    <table>
+      <tr>
+        <td class="rotulo"><label for="numero">Número:</label></td>
+        <td><input type="text" id="numero" name="numero"></td>
+      </tr>
+      <tr>
+        <td class="rotulo">Bandeira:</td>
+        <td>
+          <input type="radio" name="bandeira" value="visa" checked> <img src="imagens/visa.svg" alt="Visa"><br><br>
+          <input type="radio" name="bandeira" value="mastercard"> <img src="imagens/mastercard.svg" alt="MasterCard"><br><br>
+          <input type="radio" name="bandeira" value="amex"> <img src="imagens/amex.svg" alt="American Express">
+        </td>
+      </tr>
+      <tr>
+        <td class="rotulo"><label for="validade">Validade:</label></td>
+        <td>
+          <select id="validade" name="validade">
+            <option>2026</option>
+            <option>2027</option>
+            <option>2028</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

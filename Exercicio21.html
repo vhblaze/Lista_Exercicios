@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Exercício 21 - Lâmpada</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 30px; text-align: center; }
+  img { cursor: pointer; }
+</style>
+</head>
+<body>
+  <h2>Lâmpada</h2>
+  <p>Passe o mouse em cima da lâmpada para acendê-la.</p>
+
+  <!-- Os arquivos estão em imagens/. Se preferir, troque por lampada.jpg e lampada-on.jpg -->
+  <img id="lampada" src="imagens/lampada.svg" alt="Lâmpada" width="120"
+       onmouseover="this.src='imagens/lampada-on.svg'"
+       onmouseout="this.src='imagens/lampada.svg'">
+</body>
+</html>

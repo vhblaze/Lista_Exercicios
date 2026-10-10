@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercício 25 - Layout HTML5</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: Arial, sans-serif; margin: 0; }
+  header { background: #1f3fb5; color: #ffffff; text-align: center; padding: 24px; }
+  .corpo { display: flex; gap: 16px; padding: 16px; }
+  article { flex: 3; background: #f1f4ff; padding: 16px; border: 1px solid #1f3fb5; }
+  aside { flex: 1; background: #fff3c4; padding: 16px; border: 1px solid #d9a300; }
+  footer { background: #333333; color: #ffffff; text-align: center; padding: 16px; }
+  @media (max-width: 600px) { .corpo { flex-direction: column; } }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Meu site em HTML5</h1>
+    <p>Cabeçalho da página (tag header)</p>
+  </header>
+
+  <div class="corpo">
+    <article>
+      <h2>Conteúdo principal</h2>
+      <p>Este é o conteúdo principal da página, dentro da tag article. Aqui ficam os textos, imagens e as informações mais importantes.</p>
+      <p>O HTML5 trouxe tags semânticas que deixam o código mais organizado e mais fácil de entender, tanto para pessoas quanto para os buscadores.</p>
+    </article>
+
+    <aside>
+      <h3>Conteúdo geral</h3>
+      <p>Barra lateral (tag aside) com links, avisos ou informações complementares.</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>Rodapé da página (tag footer) - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>

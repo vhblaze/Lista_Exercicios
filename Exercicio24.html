@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Exercício 24 - Currículo</title>
+<style>
+  body { font-family: "Times New Roman", serif; margin: 30px; }
+  h1 { font-size: 30px; }
+  label.titulo { display: block; margin-top: 14px; }
+  input[type="text"] { width: 280px; }
+  textarea { width: 320px; height: 160px; font-family: "Courier New", monospace; }
+</style>
+</head>
+<body>
+  <h1>Preencha seu currículo</h1>
+
+  <form id="curriculo" action="#" method="post" onsubmit="return validar()">
+    <label class="titulo" for="nome">Nome do candidato:</label>
+    <input type="text" id="nome" name="nome">
+
+    <label class="titulo">Sexo:</label>
+    <input type="radio" name="sexo" value="M"> Masc<br>
+    <input type="radio" name="sexo" value="F"> Fem
+
+    <label class="titulo">Áreas de interesse:</label>
+    <input type="checkbox" name="area" value="tecnica"> Técnica<br>
+    <input type="checkbox" name="area" value="administrativa"> Administrativa<br>
+    <input type="checkbox" name="area" value="rh"> Recursos Humanos
+
+    <label class="titulo" for="estado">Estado Civil:</label>
+    <select id="estado" name="estado">
+      <option value="">Escolha uma Opção</option>
+      <option value="solteiro">Solteiro(a)</option>
+      <option value="casado">Casado(a)</option>
+      <option value="divorciado">Divorciado(a)</option>
+      <option value="viuvo">Viúvo(a)</option>
+    </select>
+
+    <label class="titulo" for="resumo">Resumo:</label>
+    <textarea id="resumo" name="resumo" placeholder="Insira aqui um resumo do seu currículo"></textarea>
+
+    <p><input type="submit" value="Enviar"> <input type="reset" value="Limpar"></p>
+  </form>
+
+  <script>
+    function validar() {
+      var f = document.getElementById("curriculo");
+
+      // Nome
+      if (f.nome.value.trim() === "") {
+        alert("Por favor, preencha o nome do candidato.");
+        f.nome.focus();
+        return false;
+      }
+
+      // Sexo (radio)
+      var sexoMarcado = false;
+      for (var i = 0; i < f.sexo.length; i++) {
+        if (f.sexo[i].checked) sexoMarcado = true;
+      }
+      if (!sexoMarcado) {
+        alert("Por favor, marque o sexo.");
+        return false;
+      }
+
+      // Áreas de interesse (pelo menos uma)
+      var areaMarcada = false;
+      for (var j = 0; j < f.area.length; j++) {
+        if (f.area[j].checked) areaMarcada = true;
+      }
+      if (!areaMarcada) {
+        alert("Por favor, marque pelo menos uma área de interesse.");
+        return false;
+      }
+
+      // Estado civil
+      if (f.estado.value === "") {
+        alert("Por favor, escolha o estado civil.");
+        f.estado.focus();
+        return false;
+      }
+
+      // Resumo
+      if (f.resumo.value.trim() === "") {
+        alert("Por favor, preencha o resumo do currículo.");
+        f.resumo.focus();
+        return false;
+      }
+
+      alert("Currículo enviado com sucesso!");
+      return true;
+    }
+  </script>
+</body>
+</html>

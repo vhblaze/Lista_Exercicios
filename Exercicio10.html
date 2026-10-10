@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Informações do Aquário</title>
+<style>
+  body { font-family: "Times New Roman", serif; margin: 30px; }
+  fieldset { background: #d3d3d3; width: 260px; padding: 10px 14px; }
+  fieldset fieldset { width: auto; margin: 10px 0; }
+  label.titulo { font-weight: bold; }
+  input.qtd { width: 40px; }
+</style>
+</head>
+<body>
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Informações do Aquário</legend>
+
+      <label class="titulo">Ph do Aquário:</label><br>
+      <input type="radio" name="ph" value="acido" checked> Ácido
+      <input type="radio" name="ph" value="alcalino"> Alcalino
+
+      <fieldset>
+        <legend>Peixes</legend>
+        <p><label class="titulo" for="quantidade">Quantidade:</label> <input type="text" class="qtd" id="quantidade" name="quantidade"></p>
+        <p><label class="titulo" for="especie">Espécie:</label>
+          <select id="especie" name="especie">
+            <option>Espada</option>
+            <option selected>Molinésia</option>
+            <option>Plati</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <label class="titulo">Outros:</label><br>
+      <input type="checkbox" name="outros" value="pedras"> <b>pedras</b><br>
+      <input type="checkbox" name="outros" value="plantas"> <b>plantas</b>
+    </fieldset>
+  </form>
+</body>
+</html>

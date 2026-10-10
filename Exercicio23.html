@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Exercício 23 - Maiúsculas e moeda</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 30px; }
+  label { display: block; margin-top: 14px; }
+  input { padding: 6px; width: 260px; }
+</style>
+</head>
+<body>
+  <h2>Funções com campos de texto</h2>
+
+  <label for="texto">Texto (ao sair do campo, vira maiúsculo):</label>
+  <input type="text" id="texto" onblur="maiusculo(this)">
+
+  <label for="moeda">Valor (máscara de moeda: R$ 0.000,00):</label>
+  <input type="text" id="moeda" placeholder="R$ 0,00" oninput="mascaraMoeda(this)" onblur="mascaraMoeda(this)">
+
+  <script>
+    // Converte o texto do campo para maiúsculas
+    function maiusculo(campo) {
+      campo.value = campo.value.toUpperCase();
+    }
+
+    // Aplica a máscara de moeda: R$ 1.234,56
+    function mascaraMoeda(campo) {
+      var digitos = campo.value.replace(/\D/g, ""); // só números
+
+      if (digitos === "") {
+        campo.value = "";
+        return;
+      }
+
+      digitos = digitos.replace(/^0+(?=\d)/, "");   // tira zeros à esquerda
+      while (digitos.length < 3) {
+        digitos = "0" + digitos;                    // garante reais e centavos
+      }
+
+      var reais = digitos.slice(0, -2);
+      var centavos = digitos.slice(-2);
+      reais = reais.replace(/\B(?=(\d{3})+(?!\d))/g, "."); // separador de milhar
+
+      campo.value = "R$ " + reais + "," + centavos;
+    }
+  </script>
+</body>
+</html>

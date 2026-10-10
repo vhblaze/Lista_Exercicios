@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Formulário</title>
+<style>
+  body { font-family: "Times New Roman", serif; margin: 30px; }
+  table { border-collapse: collapse; }
+  td { border: 1px solid #555; padding: 10px; }
+  input[type="text"] { width: 220px; }
+</style>
+</head>
+<body>
+  <form action="#" method="post">
+    <table>
+      <tr>
+        <td><label for="nome">Nome:</label></td>
+        <td><input type="text" id="nome" name="nome"></td>
+      </tr>
+      <tr>
+        <td><label>sexo:</label></td>
+        <td>
+          <input type="radio" id="fem" name="sexo" value="F" checked> <label for="fem">Feminino</label>
+          <input type="radio" id="masc" name="sexo" value="M"> <label for="masc">Masculino</label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label for="escolaridade">Escolaridade:</label>
+          <select id="escolaridade" name="escolaridade">
+            <option>1º Grau</option>
+            <option>2º Grau</option>
+            <option>superior</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
